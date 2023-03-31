@@ -72,3 +72,4 @@ jobs:
         with:
           fetch-depth: 0
       - run: timeout 2m make tests_run
+
