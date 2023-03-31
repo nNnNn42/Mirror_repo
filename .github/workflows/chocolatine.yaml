@@ -2,7 +2,7 @@ name: Mirroring
 
 on: [push, delete]
 
-job:
+jobs:
   push_to_mirror:
     runs-on: ubuntu-latest
     steps:
