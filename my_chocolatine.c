@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[]) {
 
-    printf("Number of arguments: %d\n", argc);
+    printf("Nombre arg: %d\n", argc);
     
  
     for (int i = 0;i<argc;i++)   {
