@@ -1,7 +1,6 @@
 #include <criterion/criterion.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "my_program.h"
 
 Test(my_program, returns_84_when_no_arguments)
 {
