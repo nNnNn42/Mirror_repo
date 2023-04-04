@@ -15,8 +15,6 @@ OBJ = $(FILES:.c=.o)
 
 TARGET_BINARY = chocolatine
 
-LIBS = -lcriterion
-
 all: clean $(TARGET_BINARY)
 
 $(TARGET_BINARY) : $(OBJ)

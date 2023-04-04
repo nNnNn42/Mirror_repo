@@ -1,17 +1,14 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[]) {
-
-    printf("Nombre arg: %d\n", argc);
-    
- 
-    for (int i = 0;i<argc;i++)   {
-        printf("Argument %d: %s\n", i, argv[i]);   
-    }
-    
-    return 0;
+int sum(int a, int b) {
+    return a + b;
 }
 
-
-
+int main() {
+    int a = 5;
+    int b = 7;
+    int result = sum(a, b);
+    printf("The sum of %d and %d is %d\n", a, b, result);
+    return 0;
+}
 
