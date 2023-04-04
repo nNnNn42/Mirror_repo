@@ -21,7 +21,7 @@ $(TARGET_BINARY) : $(OBJ)
 	$(CC) $(OBJ) $(LIBS) -o $(TARGET_BINARY)
 
 tests_run: $(OBJ)
-	$(CC) $(OBJ) tests/*.c $(LIBS) -o unit_tests
+	$(CC) $(OBJ) unit_tests/*.c $(LIBS) -o unit_tests
 	./unit_tests
 
 clean:
