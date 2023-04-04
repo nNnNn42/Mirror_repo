@@ -1,4 +1,5 @@
 #include <criterion/criterion.h>
+#include <criterion/redirect.h>
 #include <stdlib.h>
 #include <stdio.h>
 
