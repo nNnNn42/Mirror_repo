@@ -2,15 +2,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-Test(program, should_return_0)
-{
-    int argc = 2; // simulate the command-line argument count
-    cr_assert_eq(main(argc), 0, "Expected return value of 0");
+Test(my_program, test_argument_count) {
+    int argc = 4;
+    char *argv[] = {"./program", "arg1", "arg2", "arg3"};
+    
+    cr_assert(main(argc, argv) == 0, "pas de return 0");
+    cr_assert_stdout_eq_str("Nombre arg: 4\n", "compte arg incorrect");
 }
 
-Test(program, should_return_84)
-{
-    int argc = 1; // simulate the command-line argument count
-    cr_assert_eq(main(argc), 84, "Expected return value of 84");
+Test(my_program, test_arguments) {
+    int argc = 4;
+    char *argv[] = {"./program", "arg1", "arg2", "arg3"};
+    
+    cr_assert(main(argc, argv) == 0, "pas de return 0");
+    cr_assert_stdout_eq_str("Argument 0: ./program\nArgument 1: arg1\nArgument 2: arg2\nArgument 3: arg3\n", "Mauvais output");
 }
-

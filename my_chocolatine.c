@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-int main(int argc)   
-{
-    if (argc > 1) {
-        printf("coucou");
-        return 0;
+int main(int argc, char *argv[]) {
+
+    printf("Number of arguments: %d\n", argc);
+    
+ 
+    for (int i = 0;i<argc;i++)   {
+        printf("Argument %d: %s\n", i, argv[i]);   
     }
-                  
-    return 84;
+    
+    return 0;
 }
-
-
 
 
 
