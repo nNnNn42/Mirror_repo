@@ -1,15 +1,15 @@
-#include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, char *argv[])   
+int main(int argc)   
 {
     if (argc > 1) {
-    printf("coucou");
+        printf("coucou");
         return 0;
     }
                   
     return 84;
 }
+
 
 
 
