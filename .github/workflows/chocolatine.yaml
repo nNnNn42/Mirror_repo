@@ -22,6 +22,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential libboost-all-dev
       - run: make
      
   check_coding_style:
@@ -42,7 +44,6 @@ jobs:
               error_type="$(echo "$line" | cut -d':' -f4)"
               echo "::error file=$offending_file,line=$offending_line,title=$error_level coding style error::$error_type"
           done < "coding-style-reports.log"
-
   check_program_compilation:
     runs-on: ubuntu-latest
     container:
@@ -52,6 +53,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Install dependencies
+        run: apt-get update && apt-get install -y build-essential libboost-all-dev
       - run: timeout 2m make
       - run: |
           make clean
@@ -61,7 +64,6 @@ jobs:
               exit 1
             fi
           done
-
   run_tests:
     runs-on: ubuntu-latest
     container:
@@ -71,6 +73,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Install dependencies
+        run: apt-get update && apt-get install -y build-essential libboost-all-dev
       - run: timeout 2m make tests_run
-
 
