@@ -1,6 +1,6 @@
 #include <criterion/criterion.h>
 #include <stdio.h>
-#include "my.h"
+#include "../my.h"
 
 Test(sum, returns_correct_sum) {
     int a = 5;
